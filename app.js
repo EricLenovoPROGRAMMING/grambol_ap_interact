@@ -267,14 +267,14 @@ function denote() {
  }
 }*/
 
-function createRambol(wc, ram) {
+function createRambol(wc, ram, word) {
+ let a = "";
  do {
  //$("rambol-div").innerHTML = "";
  let count = 0;
  let mcount = -1,
   mword = 0;
  let length = 0;
- let a = "";
  for (let n of ram) {
   let m = n;
   let restore = n;
@@ -295,6 +295,8 @@ function createRambol(wc, ram) {
   count++;
   mcount++;
  }
+ 
+ if (a !== word) break;
  } while(false);
 
  return a;
