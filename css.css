@@ -1,0 +1,116 @@
+#core {
+ width: auto;
+ height: auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background: linear-gradient(90deg, #329, #913);
+ position: relative;
+ overflow: hidden;
+}
+
+
+#fscanvas {
+ width: auto;
+ height: auto;
+ display: none;
+ flex-direction: column;
+ align-items: center;
+ background: linear-gradient(90deg, #386, #399);
+ position: absolute
+ 
+}
+
+#head {
+ width: 100%;
+ height: 10%;
+ margin: 0 0 0 0;
+ display: flex;
+ margin-left: 9px;
+ align-items: center;
+ 
+}
+#headgroup {
+ font-size: 1.3em;
+}
+
+body {
+ margin: 0 0 0 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ background: #000;
+ 
+ text-shadow: 1px 0px 1px #000, -1px 0px 1px #000, 0px 1px 1px #000, 0px -1px 1px #000;
+}
+
+#content {
+ background: #9430;
+ 
+}
+
+#question-div {
+ background: #0005;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#question {
+ font-size: 2.2em;
+ text-align: center;
+}
+
+#picture-div {
+ background: #0000;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#picture {
+ background: #000;
+}
+#rambol-div {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+ background: #3225;
+}
+
+#rambol {
+ font-size: 3em;
+}
+
+#answer-div {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#control-div {
+ display: flex;
+ justify-content: right;
+ align-items: center;
+ flex-direction: row
+}
+
+.button-button {
+ width: 16%;
+ height: 70%;
+ font-size: 1.3em;
+ border: 2px solid #744;
+ text-align: center;
+ background: #599;
+}
+
+.button-button:hover{
+ background: #999;
+}
+.button-button:click{
+ background: #666;
+}
+
+#btn-check, #btn-ramrev {
+ display: none;
+}
