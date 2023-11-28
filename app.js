@@ -155,9 +155,43 @@ const WORD_BANK = [
 function rambol(name) {
  current.name = name;
  let a = WORD_BANK[name];
- let jumbled = a.word.split("").sort(() => Math.random() - 0.5);
+ let jumbled = a.word.split("");
+ let temp = [];
+ let cc = 0;
+ let currentPos = 0;
+ for (let ma = 0; ma < a.wcount.length; ma++) {
+  let na = a.wcount[ma];
+  let mt = [];
+  cc = currentPos;
+  for (let mb = 0; mb < na; mb++) {
+   mt.push(jumbled[cc]);
+   cc++;
+  }
+  mt.sort(() => Math.random() - 0.5);
+  let isDifferent = false;
+  for (let mb = 0; mb < na; mb++) {
+   
+   if (jumbled[currentPos + mb] !== mt[mb]) {
+    isDifferent = true;
+   }
+  }
+  
+  if (isDifferent) {
+   for (let mb = 0; mb < na; mb++) {
+  
+   temp.push(mt[mb]);
+   currentPos++;
+  }
+  
+  } else ma--;
+  
+  
+ }
+ jumbled = temp;
+ console.log(temp)
+
  if (!("rambol" in a)) a.rambol = jumbled;
- let b = createRambol(a.wcount, a.rambol);
+ let b = createRambol(a.wcount, a.rambol, a.word);
  $("question").innerHTML = a.quote;
  $("rambol").style.color = "#fff";
  $("rambol").innerHTML = b; 
@@ -296,7 +330,7 @@ function createRambol(wc, ram, word) {
   mcount++;
  }
  
- if (a !== word) break;
+ if (a !== word) break
  } while(false);
 
  return a;
